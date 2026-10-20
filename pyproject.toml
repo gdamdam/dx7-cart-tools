@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dx7cart"
+version = "1.0.0"
+description = "Validate and send DX7 SysEx carts to a Korg volca fm2 or any DX7-compatible synth"
+readme = "README.md"
+license = { text = "GPL-3.0-or-later" }
+authors = [{ name = "gio", email = "gdamdam@users.noreply.github.com" }]
+requires-python = ">=3.8"
+dependencies = ["mido", "python-rtmidi"]
+keywords = ["dx7", "sysex", "midi", "volca", "fm-synthesis"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Topic :: Multimedia :: Sound/Audio :: MIDI",
+    "Environment :: Console",
+]
+
+[project.urls]
+Homepage = "https://github.com/gdamdam/dx7-cart-tools"
+
+[project.scripts]
+dx7cart = "dx7cart:main"
+
+[tool.setuptools]
+py-modules = ["dx7cart"]
